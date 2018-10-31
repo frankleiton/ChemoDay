@@ -1,0 +1,7 @@
+{
+  "name": "ChemoDay",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
