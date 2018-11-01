@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { InicialPage } from '../inicial/inicial';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the RegisterPage page.
@@ -16,23 +17,51 @@ import { InicialPage } from '../inicial/inicial';
 })
 export class RegisterPage {
 
-  name:string;
-  date:string;
-  gender:string;
-  height:string;
-  weigth:string;
-  chemo:string;
+  User = {
+    name: "",
+    date: "",
+    gender: "",
+    height: "",
+    weigth: "",
+    chemo: ""
+  };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  name: any;
+  date: string;
+  gender: string;
+  height: string;
+  weigth: string;
+  chemo: string;
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }
 
-  openPageInicial()
-  {
-    this.navCtrl.push(InicialPage);
+  openPageInicial() {
+
+    this.User.name = this.name;
+    this.User.date = this.date;
+    this.User.gender = this.gender;
+    this.User.height = this.height;
+    this.User.weigth = this.weigth;
+    this.User.chemo = this.chemo;
+
+    this.storage.set('User', this.User).then((data)=>{
+      console.log(data);
+      this.storage.get('User').then((val) => {
+        console.log(val);
+        this.navCtrl.setRoot(InicialPage);
+      });
+    })
+
+  // Or to get a key/value pair
+  
+
   }
 
 }

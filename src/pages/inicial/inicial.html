@@ -1,12 +1,27 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
-      My Calendar App
+      CHEMO DAY
     </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="addhorario()">
+          <ion-icon name="add-circle"></ion-icon>
+        </button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+    <ion-grid>
+        <ion-row>
+          <ion-col>Tratamentos</ion-col>
+          <ion-col>Consultas</ion-col>
+          <ion-col>Historico</ion-col>
+        </ion-row>
+      </ion-grid>
   <div class="calendar-header">
     <ion-row class="calendar-month">
       <ion-col col-2 (click)="goToLastMonth()">
@@ -32,7 +47,7 @@
       <ion-row class="calendar-date">
         <ion-col col-1 *ngFor="let lastDay of daysInLastMonth" class="last-month">{{lastDay}}</ion-col>
         <ion-col col-1 *ngFor="let day of daysInThisMonth">
-          <span class="currentDate" *ngIf="currentDate === day; else otherDate">{{day}}</span>
+          <span class="currentDate" *ngIf="currentDate === day || eventDate === day; else otherDate">{{day}}</span>
           <ng-template #otherDate class="otherDate">{{day}}</ng-template>
         </ion-col>
         <ion-col col-1 *ngFor="let nextDay of daysInNextMonth" class="next-month">{{nextDay}}</ion-col>

@@ -24,6 +24,8 @@ export class InicialPage {
   currentYear: any;
   currentDate: any;
 
+  eventDate:any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -33,6 +35,7 @@ export class InicialPage {
 
   ionViewWillEnter() {
     this.date = new Date();
+    this.eventDate = new Date(2018, 10, 17).getDate();
     this.monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     this.getDaysOfMonth();
   }

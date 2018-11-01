@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>consultaform</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+
+    <ion-card-header>
+      New Medical consultation
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>Description: </ion-label>
+          <ion-input type="text" [(ngModel)]="description"></ion-input>
+        </ion-item>
+
+        {{description}}
+
+        <ion-item>
+          <ion-label fixed>Date: </ion-label>
+          <ion-input type="date" [(ngModel)]="date"></ion-input>
+        </ion-item>
+
+        {{date}}
+
+        <ion-item>
+          <ion-label fixed>Place: </ion-label>
+          <ion-input type="text" [(ngModel)]="local"></ion-input>
+        </ion-item>
+
+        {{local}}
+      </ion-list>
+
+      <button ion-button color="secondary" (click)="submitInfos()">Submit</button>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
