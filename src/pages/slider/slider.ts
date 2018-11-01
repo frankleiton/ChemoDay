@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RegisterPage } from '../register/register';
+
 
 /**
  * Generated class for the SliderPage page.
@@ -38,6 +40,11 @@ export class SliderPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SliderPage');
+  }
+
+  openRegisterPage()
+  {
+    this.navCtrl.push(RegisterPage);
   }
 
 }

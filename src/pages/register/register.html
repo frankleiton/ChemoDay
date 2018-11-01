@@ -1,0 +1,48 @@
+<ion-content padding>
+    <ion-card>
+      
+        <ion-card-content>
+          <ion-list>
+        
+            <ion-item>
+              <ion-label floating>Name:</ion-label>
+              <ion-input type="text" [(ngModel)]="name"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>birth of date:</ion-label>
+              <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="date"></ion-datetime>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Gender</ion-label>
+              <ion-select [(ngModel)]="gender">
+                <ion-option value="f">Female</ion-option>
+                <ion-option value="m">Male</ion-option>
+              </ion-select>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label floating>Weight: </ion-label>
+              <ion-input type="text"  [(ngModel)]="weigth"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label floating>Height: </ion-label>
+              <ion-input type="text" [(ngModel)]="height"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Type of Chemo: </ion-label>
+              <ion-select [(ngModel)]="chemo">
+                <ion-option value="f">chemo 01</ion-option>
+                <ion-option value="m">chemo 02</ion-option>
+              </ion-select>
+            </ion-item>
+          
+          </ion-list>
+        </ion-card-content>
+        <button ion-button full color="secondary" (click)="openPageInicial()">Register</button>
+      </ion-card>
+
+</ion-content>
