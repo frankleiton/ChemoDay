@@ -4,8 +4,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Storage } from '@ionic/storage';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+// import { HomePage } from '../pages/home/home';
+// import { ListPage } from '../pages/list/list';
 import { SliderPage } from '../pages/slider/slider';
 import { InicialPage } from '../pages/inicial/inicial';
 import { MedicamentosPage } from '../pages/medicamentos/medicamentos';
@@ -18,14 +18,12 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = SliderPage;
-
   pages: Array<{title: string, component: any}>;
-
   constructor(private storage: Storage, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     
     storage.get('User').then((val) => {
       console.log(val);
-      if (val.name != "") {
+      if (val != null) {
         this.nav.setRoot(InicialPage);
       }
       this.initializeApp();

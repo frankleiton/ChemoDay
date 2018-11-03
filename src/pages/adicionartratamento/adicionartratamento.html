@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Treatment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-gradient">
+  <ion-card>
+
+    <ion-card-header>
+      New Treatment
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>Description: </ion-label>
+          <ion-input type="text" [(ngModel)]="descricao"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Date</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY HH:mm" [(ngModel)]="data"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Frequencyin Hours</ion-label>
+          <ion-select [(ngModel)]="frequencia">
+            <ion-option *ngFor="let item of time" value="{{item}}">{{item}}</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Quantidade de doses</ion-label>
+          <ion-select [(ngModel)]="doses">
+            <ion-option *ngFor="let item of time" value="{{item}}">{{item}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <button ion-button color="secondary" (click)="submitInfos()">Submit</button>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

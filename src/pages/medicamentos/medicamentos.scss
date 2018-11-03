@@ -3,4 +3,9 @@ page-medicamentos {
     {
         height: 40px;
     }
+
+    .bg-gradient{
+        background-size: cover;
+        background: url('../assets/imgs/bg.png') no-repeat center center fixed;
+      }
 }

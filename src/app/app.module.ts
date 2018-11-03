@@ -16,6 +16,8 @@ import { Calendar } from '@ionic-native/calendar';
 import { MedicamentosPage } from '../pages/medicamentos/medicamentos';
 import { ConsultasPage } from '../pages/consultas/consultas';
 import { ConsultaformPage } from '../pages/consultaform/consultaform';
+import { AdicionartratamentoPage } from '../pages/adicionartratamento/adicionartratamento';
+import { TratamentosPage } from '../pages/tratamentos/tratamentos';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { ConsultaformPage } from '../pages/consultaform/consultaform';
     ListPage,
     MedicamentosPage,
     ConsultasPage,
-    ConsultaformPage
+    ConsultaformPage,
+    AdicionartratamentoPage,
+    TratamentosPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,9 @@ import { ConsultaformPage } from '../pages/consultaform/consultaform';
     ListPage,
     MedicamentosPage,
     ConsultasPage,
-    ConsultaformPage
+    ConsultaformPage,
+    AdicionartratamentoPage,
+    TratamentosPage
   ],
   providers: [
     StatusBar,

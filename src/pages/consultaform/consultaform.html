@@ -7,7 +7,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="bg-gradient">
   <ion-card>
 
     <ion-card-header>
@@ -21,21 +21,15 @@
           <ion-input type="text" [(ngModel)]="description"></ion-input>
         </ion-item>
 
-        {{description}}
-
         <ion-item>
           <ion-label fixed>Date: </ion-label>
           <ion-input type="date" [(ngModel)]="date"></ion-input>
         </ion-item>
 
-        {{date}}
-
         <ion-item>
           <ion-label fixed>Place: </ion-label>
           <ion-input type="text" [(ngModel)]="local"></ion-input>
         </ion-item>
-
-        {{local}}
       </ion-list>
 
       <button ion-button color="secondary" (click)="submitInfos()">Submit</button>

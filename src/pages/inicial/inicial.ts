@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AdicionartratamentoPage } from '../adicionartratamento/adicionartratamento';
+import { Storage } from '@ionic/storage';
+import { TratamentosPage } from '../tratamentos/tratamentos';
+import { ConsultasPage } from '../consultas/consultas';
 
 /**
  * Generated class for the InicialPage page.
@@ -15,6 +19,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InicialPage {
 
+  tratamentos = [];
+
   date: any;
   daysInThisMonth: any;
   daysInLastMonth: any;
@@ -26,16 +32,30 @@ export class InicialPage {
 
   eventDate:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage:Storage) {
   }
 
+  opentratamento()
+  {
+    this.navCtrl.push(TratamentosPage);
+  }
+
+  openconsulta()
+  {
+    this.navCtrl.push(ConsultasPage);
+  }
+
+  addhorario(){
+    this.navCtrl.push(AdicionartratamentoPage);
+  }
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad InicialPage');
   }
 
   ionViewWillEnter() {
     this.date = new Date();
-    this.eventDate = new Date(2018, 10, 17).getDate();
+    //this.eventDate = new Date(2018, 10, 17).getDate();
     this.monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     this.getDaysOfMonth();
   }

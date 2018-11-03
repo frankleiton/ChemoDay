@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Treatments</ion-title>
+  </ion-navbar>
+  <ion-buttons end>
+      <button ion-button icon-only (click)="addtratamento()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
+</ion-header>
+
+
+<ion-content padding class="bg-gradient">
+  <br>
+  <ion-card *ngFor="let item of tratamentos">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-8>Description: {{item.descricao}}</ion-col>
+          <ion-col><img src="assets/imgs/medical.png" class="medicalIcon"></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p>Date: {{item.data}}</p>
+            <p>Frequency: {{item.frequencia}} H</p>
+            <p>Dosage: {{item.doses}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

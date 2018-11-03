@@ -57,10 +57,7 @@ export class RegisterPage {
         console.log(val);
         this.navCtrl.setRoot(InicialPage);
       });
-    })
-
-  // Or to get a key/value pair
-  
+    }); 
 
   }
 

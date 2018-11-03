@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { InicialPage } from '../inicial/inicial';
 
 
 /**
@@ -61,6 +62,7 @@ export class ConsultaformPage {
     this.Consultas.push(consulta);
     this.storage.set('consultasM', this.Consultas).then((data)=> {
       console.log(data);
+      this.navCtrl.setRoot(InicialPage);
     });
   }
 

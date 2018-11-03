@@ -21,17 +21,17 @@ export class SliderPage {
     {
       title: "Welcome to the ChemoDay",
       description: "<b>ChemoDay</b> is an environment made to help the chemotherapeutic patient in their day",
-      image: "assets/imgs/ica-slidebox-img-1.png",
+      image: "assets/imgs/report.png",
     },
     {
       title: "Daily monitoring",
       description: "Here the patient can register their well-being daily, save their dates of medical consultations, as well as create medication alerts.",
-      image: "assets/imgs/ica-slidebox-img-2.png",
+      image: "assets/imgs/calendar.png",
     },
     {
       title: "Medication list",
       description: "<b>ChemoDay</b> also supports medicines with tips and suggestion for usage.",
-      image: "assets/imgs/ica-slidebox-img-3.png",
+      image: "assets/imgs/drugs.png",
     }
   ];
 

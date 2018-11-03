@@ -1,4 +1,9 @@
-<ion-content padding>
+<ion-content padding class="bg-gradient">
+  <br><br>
+  <div class="imgRegister">
+    <img src="assets/imgs/user.png" class="imgUser">
+  </div>
+  <h1>Register</h1>
     <ion-card>
       
         <ion-card-content>
@@ -8,9 +13,18 @@
               <ion-label floating>Name:</ion-label>
               <ion-input type="text" [(ngModel)]="name"></ion-input>
             </ion-item>
-
-            {{name}}
         
+            
+            <ion-item>
+              <ion-label floating>Weight: </ion-label>
+              <ion-input type="text"  [(ngModel)]="weigth"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label floating>Height: </ion-label>
+              <ion-input type="text" [(ngModel)]="height"></ion-input>
+            </ion-item>
+            
             <ion-item>
               <ion-label>birth of date:</ion-label>
               <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="date"></ion-datetime>
@@ -23,28 +37,45 @@
                 <ion-option value="m">Male</ion-option>
               </ion-select>
             </ion-item>
-        
-            <ion-item>
-              <ion-label floating>Weight: </ion-label>
-              <ion-input type="text"  [(ngModel)]="weigth"></ion-input>
-            </ion-item>
-        
-            <ion-item>
-              <ion-label floating>Height: </ion-label>
-              <ion-input type="text" [(ngModel)]="height"></ion-input>
-            </ion-item>
-        
+
             <ion-item>
               <ion-label>Type of Chemo: </ion-label>
               <ion-select [(ngModel)]="chemo">
-                <ion-option value="f">chemo 01</ion-option>
-                <ion-option value="m">chemo 02</ion-option>
+                <ion-option value="Anal">Anal</ion-option>
+                <ion-option value="Bexiga">Bexiga</ion-option>
+                <ion-option value="Boca e orofaringe">Boca e orofaringe</ion-option>
+                <ion-option value="Colorretal">Colorretal</ion-option>
+                <ion-option value="Colo do Útero">Colo do Útero</ion-option>
+                <ion-option value="Esôfago">Esôfago</ion-option>
+                <ion-option value="Estômago">Estômago</ion-option>
+                <ion-option value="Fígado">Fígado</ion-option>
+                <ion-option value="Infantil">Infantil</ion-option>
+                <ion-option value="Laringe">Laringe</ion-option>
+                <ion-option value="Leucemia">Leucemia</ion-option>
+                <ion-option value="Linfoma de Hodgkin">Linfoma de Hodgkin</ion-option>
+                <ion-option value="Linfoma não-Hodgkin">Linfoma não-Hodgkin</ion-option>
+                <ion-option value="Mama">Mama</ion-option>
+                <ion-option value="Mieloma Múltiplo">Mieloma Múltiplo</ion-option>
+                <ion-option value="Ovário">Ovário</ion-option>
+                <ion-option value="Pâncreas">Pâncreas</ion-option>
+                <ion-option value="Pele Melanoma">Pele Melanoma</ion-option>
+                <ion-option value="Pele não Melanoma">Pele não Melanoma</ion-option>
+                <ion-option value="Pênis">Pênis</ion-option>
+                <ion-option value="Próstata">Próstata</ion-option>
+                <ion-option value="Pulmão">Pulmão</ion-option>
+                <ion-option value="Rim">Rim</ion-option>
+                <ion-option value="Testículo">Testículo</ion-option>
+                <ion-option value="Tireioide">Tireioide</ion-option>
+                <ion-option value="Tumores de Ewing">Tumores de Ewing</ion-option>
+                <ion-option value="Tumores Cerebrais">Tumores Cerebrais</ion-option>
+                <ion-option value="Tumores ósseos">Tumores ósseos</ion-option>
+                <ion-option value="Sítio primário desconhecido">Sítio primário desconhecido</ion-option>
               </ion-select>
             </ion-item>
           
           </ion-list>
+          <button ion-button full color="secondary" (click)="openPageInicial()">Register</button>
         </ion-card-content>
-        <button ion-button full color="secondary" (click)="openPageInicial()">Register</button>
       </ion-card>
 
 </ion-content>

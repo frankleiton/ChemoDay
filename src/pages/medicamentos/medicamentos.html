@@ -10,33 +10,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>medicamentos</ion-title>
+    <ion-title>Remedy</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
-    <ion-card>
-
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col>
-                  
-              </ion-col>
-              <ion-col col-8>
-                <b>Name</b>
-              </ion-col>
-              <ion-col>
-                <b>Type</b>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-    
-      </ion-card>
+<ion-content padding class="bg-gradient">
+  
   <ion-card *ngFor="let item of medicamentos">
 
     <ion-card-content>
