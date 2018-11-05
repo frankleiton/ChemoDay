@@ -21,10 +21,30 @@ page-inicial {
     text-align: center;
   }
 
+  p{
+    text-align: center;
+    font-size: 14px;
+  }
+
   .calendar-month
   {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+
+  .content-status
+  {
+    background-color: #f8f8f8;
+    padding: 8px;
+    border-bottom: solid #ff4057c7 4px;
+    box-shadow: 5px 5px 10px #676767;
+    border-left: solid #ff4057c7 8px;
+  }
+
+  .icon-status
+  {
+    height: 40px;
+    width: auto;
   }
    
   
